@@ -1,0 +1,190 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>C++</title>
+</head>
+<body>
+
+
+
+    <div class="contenedor">
+    <h1>Programación con C++</h1>
+    <h5>2° de secundaria.</h5>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>Definiciones</strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>Directivas #include</strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Las directivas #include le dicen al compilador que debe <strong>importar</strong> c&oacute;digo escrito por otros (bibliotecas) antes de compilar tu programa. Esto te permite usar funciones ya hechas, como imprimir texto en pantalla o manejar archivos.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>#include &lt;iostream&gt; &nbsp;// Permite usar cout</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>La compilaci&oacute;n&nbsp;</strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Es el proceso donde el compilador <strong>traduce tu c&oacute;digo C++</strong> a un archivo ejecutable que la computadora puede entender. Si hay errores de sintaxis, el compilador los detecta aqu&iacute;.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>Ejecuci&oacute;n</strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Despu&eacute;s de compilar, la ejecuci&oacute;n es simplemente <strong>poner en marcha</strong> el programa ya traducido. Aqu&iacute; es donde ves los resultados en pantalla.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>Tipos de datos.</strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Los tipos de datos definen <strong>qu&eacute; clase de informaci&oacute;n</strong> puede almacenar una variable: n&uacute;meros enteros, decimales, caracteres, texto, etc. Elegir el tipo correcto ayuda a que el programa sea m&aacute;s eficiente y claro.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>int edad = 12; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// N&uacute;mero entero</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>float altura = 1.50; &nbsp; &nbsp;// N&uacute;mero decimal</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>char inicial = &apos;A&apos;; &nbsp; &nbsp; // Un solo car&aacute;cter</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>string saludo = &quot;Hola&quot;; // Texto (requiere &lt;string&gt;)</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><br></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>Funci&oacute;n cout</strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Es un objeto de C++ que se utiliza para mostrar informaci&oacute;n en la pantalla. Forma parte de la librer&iacute;a &lt;iostream&gt; y permite imprimir texto, n&uacute;meros o resultados de operaciones hacia la consola.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>Cadena de texto</strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Una cadena de texto (o <em>string</em>) es un tipo de dato que almacena una secuencia de caracteres, como palabras, frases o cualquier combinaci&oacute;n de letras, n&uacute;meros y s&iacute;mbolos.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Operadores aritm&eacute;ticos</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Los operadores aritm&eacute;ticos son s&iacute;mbolos que permiten realizar operaciones matem&aacute;ticas en un programa, como&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>sumar (+),&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>restar (-),&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>multiplicar (*),&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>dividir (/) o calcular el residuo de una divisi&oacute;n (%).&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Se usan para manipular valores num&eacute;ricos dentro del c&oacute;digo.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>Tipo de dato int</strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Es un tipo de dato que almacena n&uacute;meros enteros, es decir, n&uacute;meros sin decimales. Se usa para representar cantidades como edades, puntuaciones o contadores.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>return 0;</strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Es una instrucci&oacute;n que se coloca al final de la funci&oacute;n <strong>main()</strong> para indicar que el programa termin&oacute; correctamente. El valor 0 se interpreta como &ldquo;ejecuci&oacute;n exitosa&rdquo;.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>variables</strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Son espacios en memoria donde se guarda informaci&oacute;n que puede cambiar durante la ejecuci&oacute;n del programa. Funcionan como &ldquo;cajas&rdquo; con nombre donde el programador puede almacenar y modificar datos.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>Constantes</strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Son valores que se guardan en memoria, pero <strong>no pueden cambiar</strong> durante la ejecuci&oacute;n del programa. Se usan cuando un dato debe permanecer fijo, como el valor de &pi; o un l&iacute;mite m&aacute;ximo.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Explicaciones extra:</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>En C++, muchas funciones y objetos &uacute;tiles, como <strong>cout, cin, string, endl,</strong> est&aacute;n dentro del <strong>namespace</strong> llamado <strong>std</strong>. Sin esta l&iacute;nea, tendr&iacute;as que escribirlos con su nombre completo, por ejemplo:</p>
+<ul style="margin-bottom:0cm;margin-top:0cm;" type="disc">
+    <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>std : : cout</li>
+    <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>std : : string</li>
+    <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>std : : endl</li>
+</ul>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Cuando escribes <strong>using spacename std; ,</strong> le dices al programa:</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><em>&quot;Puedes usar todo lo que est&eacute; dentro de <strong>std&nbsp;</strong>sin poner <strong>std: :</strong> cada vez.&quot;</em></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>C&oacute;digo base para todos los documentos que vamos a crear</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>#include &lt;iostream&gt;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>using</strong> <strong>namespace</strong> std;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>//En este espacio van las variables</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>int</strong> main()</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>{</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp; &nbsp; //Aqu&iacute; va el contenido de tu programa</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp; &nbsp; cout&lt;&lt;&quot;Ejemplo de c&oacute;digo base en Dev C++&quot;;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp; &nbsp; return 0;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>}</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<ul style="margin-bottom:0cm;margin-top:0cm;" type="disc">
+    <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Mi&eacute;rcoles</li>
+</ul>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Evaluaci&oacute;n te&oacute;rica en sal&oacute;n de clases.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Jueves</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>Tipos de datos:</strong></p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Declaraci&oacute;n de los tipos de datos:&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Float (double, double long) para n&uacute;meros con valores decimales.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>Float</strong></p>
+<ul style="margin-bottom:0cm;margin-top:0cm;" type="disc">
+    <ul style="margin-bottom:0cm;margin-top:0cm;" type="disc">
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Ocupa <strong>4 bytes</strong> de memoria.</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Tiene alrededor de <strong>6 a 7 cifras decimales de precisi&oacute;n</strong>.</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Es el tipo m&aacute;s ligero y r&aacute;pido, pero tambi&eacute;n el menos preciso.</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Se utiliza cuando la precisi&oacute;n no es muy importante.</li>
+    </ul>
+</ul>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Sintaxis de ejemplo:</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>float pi = 3.141592f;</p>
+<ul style="margin-bottom:0cm;margin-top:0cm;" type="disc">
+    <li style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>____________________________________________________________________</li>
+</ul>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;<strong>Double</strong></p>
+<ul style="margin-bottom:0cm;margin-top:0cm;" type="disc">
+    <ul style="margin-bottom:0cm;margin-top:0cm;" type="circle">
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Ocupa <strong>8 bytes</strong>.</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Tiene alrededor de <strong>15 a 16 cifras decimales de precisi&oacute;n</strong>.</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Es el tipo decimal m&aacute;s usado en C++.</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Se utiliza cuando se requieren c&aacute;lculos moderados, como los financieros o cient&iacute;ficos.&nbsp;</li>
+    </ul>
+</ul>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Sintaxis de ejemplo:<br>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>double pi_double = 3.14159265358979;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>_____________________________________________________________________</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>Double Long</strong></p>
+<ul style="margin-bottom:0cm;margin-top:0cm;" type="disc">
+    <ul style="margin-bottom:0cm;margin-top:0cm;" type="circle">
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Ocupa <strong>12, 16 o incluso 24 bytes</strong>, seg&uacute;n el compilador.</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Tiene <strong>m&aacute;s precisi&oacute;n que double</strong>, llegando a <strong>18&ndash;21 cifras decimales o m&aacute;s</strong>.</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Es el m&aacute;s preciso, pero tambi&eacute;n el m&aacute;s pesado.</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">se usa cuando la precisi&oacute;n en lo m&aacute;s importante como los c&aacute;lculos cient&iacute;ficos de alta precisi&oacute;n.</li>
+    </ul>
+</ul>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Sintaxis de ejemplo:<br>&nbsp;long double pi_double_long = 3.14159265358979323846L;<br>&nbsp;_____________________________________________________________________<br>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>char.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'><strong>char</strong> es un tipo de dato que almacena <strong>un solo car&aacute;cter</strong>. Ese car&aacute;cter puede ser:</p>
+<ul style="margin-bottom:0cm;margin-top:0cm;" type="disc">
+    <ul style="margin-bottom:0cm;margin-top:0cm;" type="circle">
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Una letra (&apos;A&apos;, &apos;Z&apos;)</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Un n&uacute;mero como car&aacute;cter (&apos;5&apos;)</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Un s&iacute;mbolo (&apos;#&apos;, &apos;?&apos;)</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Un espacio (&apos; &apos;)</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Un car&aacute;cter especial (&apos;<strong>\</strong>n&apos;, &apos;<strong>\</strong> t&apos;)</li>
+    </ul>
+</ul>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Siempre se escribe entre <strong>comillas simples &apos; &apos;</strong>.</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Puntos importantes para considerar:</p>
+<ul style="margin-bottom:0cm;margin-top:0cm;" type="disc">
+    <ul style="margin-bottom:0cm;margin-top:0cm;" type="circle">
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Ocupa <strong>1 byte</strong> de memoria.</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Internamente almacena un <strong>c&oacute;digo ASCII</strong>, pero t&uacute; lo ves como un car&aacute;cter.</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Solo puede guardar <strong>un car&aacute;cter a la vez</strong>.</li>
+        <li style="margin-top: 0cm;margin-right: 0cm;margin-bottom: 8pt;line-height: 115%;font-size:16px;font-family: Aptos, sans-serif;">Si intentas poner m&aacute;s de uno, el compilador marca error.</li>
+    </ul>
+</ul>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>__________________________________________________________________<br>&nbsp;Sintaxis de ejemplo:<br>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>char letra = &apos;A&apos;;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>cout &lt;&lt; &quot;La letra es: &quot; &lt;&lt; letra &lt;&lt; endl;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>__________________________________________________________________</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>char digito = &apos;7&apos;; &nbsp;// OJO: no es el n&uacute;mero 7, es el car&aacute;cter &apos;7&apos;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>__________________________________________________________________</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>tipo de dato bool en C++</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>El tipo de dato bool (abreviaci&oacute;n de boolean) sirve para almacenar valores l&oacute;gicos, es decir:</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>- true &rarr; verdadero &nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>- false &rarr; falso &nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Es uno de los tipos m&aacute;s simples e importantes en programaci&oacute;n, porque permite:</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>- Tomar decisiones &nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>- Controlar condiciones &nbsp;&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>- Activar o desactivar estados &nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>- Comparar valores &nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>Caracter&iacute;sticas clave</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>- Ocupa 1 byte de memoria. &nbsp;&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>- Solo puede almacenar true o false. &nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>- Cuando se imprime:</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp; - true suele mostrarse como 1</p>
+<div style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;border:none;border-bottom:solid windowtext 1.0pt;padding:0cm 0cm 1.0pt 0cm;'>
+    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;border:none;padding:0cm;'>&nbsp; &nbsp;- false suele mostrarse como 0</p>
+    <p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;border:none;padding:0cm;'>&nbsp;</p>
+</div>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;Ejemplo b&aacute;sico</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>C++</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>bool encendido = true;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>bool apagado = false;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>cout &lt;&lt; encendido &lt;&lt; endl; // imprime 1</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>cout &lt;&lt; apagado &lt;&lt; endl; &nbsp; // imprime 0</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;border:none;padding:0cm;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;Ejemplo con comparaci&oacute;n</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>int a = 5;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>int b = 10;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>bool resultado = a &lt; b; &nbsp;// true</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>cout &lt;&lt; resultado; &nbsp; // imprime 1</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;border:none;padding:0cm;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+<p style='margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:115%;font-size:16px;font-family:"Aptos",sans-serif;'>&nbsp;</p>
+    </div>
+
+
+</body>
+</html>

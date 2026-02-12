@@ -1,0 +1,97 @@
+ *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #3F5EFB;
+        background: radial-gradient(circle,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+   
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+
+        /* Imagen FHD */
+        background-image: url("/imgs/fondo1.png");
+
+        /* Punto inicial */
+        background-position: 0% 0%;
+
+        /* Animación */
+        animation: moverFondo 30s linear infinite;
+    }
+
+        /* Animación diagonal */
+    @keyframes moverFondo {
+        0% { background-position: 0% 0%; }
+        100% { background-position: 100% 0%; }
+    }
+
+
+
+    #btnAulas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button{
+        background-color: #ffffff;
+        border: none;
+        padding: 15px 30px;
+        margin: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover{
+        background-color:#e1e0e0 ;
+        box-shadow: 0px 3px 10px rgba(0,0, 0, 0.8);
+        scale: 1.1;
+    }
+    button:active{
+        background-color: #ffffff;
+    }
+
+
+    /*Estilos para el contenido de secundaria*/
+.contenedor {
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    height: 90vh;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Scrollbar para Chrome, Edge y Safari */
+.contenedor::-webkit-scrollbar {
+    width: 40px; /* ← tamaño grande para dedo */
+}
+
+.contenedor::-webkit-scrollbar-track {
+    background: #cce6ff; /* azul muy claro */
+    border-radius: 10px;
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+    background: #4da6ff; /* azul principal */
+    border-radius: 10px;
+    border: 4px solid #cce6ff; /* espacio interno */
+}
+
+.contenedor::-webkit-scrollbar-thumb:hover {
+    background: #1a8cff; /* azul más intenso al pasar el cursor */
+}
+
+    
