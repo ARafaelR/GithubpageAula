@@ -16,7 +16,7 @@
         height: 100vh;
 
         /* Imagen FHD */
-        background-image: url("/imgs/fondo1.png");
+        background-image: url("imgs/fondo1.png");
 
         /* Punto inicial */
         background-position: 0% 0%;
@@ -60,7 +60,10 @@
     button:active{
         background-color: #ffffff;
     }
-
+    a{
+        text-decoration: none;
+        color: black;
+    }
 
     /*Estilos para el contenido de secundaria*/
 .contenedor {
