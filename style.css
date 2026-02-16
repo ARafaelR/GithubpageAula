@@ -43,8 +43,8 @@
     button{
         background-color: #ffffff;
         border: none;
-        padding: 15px 30px;
         margin: 10px;
+        padding: 10px;
         font-size: 16px;
         border-radius: 5px;
         cursor: pointer;
@@ -60,17 +60,59 @@
     button:active{
         background-color: #ffffff;
     }
-    a{
+
+    button a{
         text-decoration: none;
         color: black;
+        padding: auto;
     }
 
-    /*Estilos para el contenido de secundaria*/
+
+/*Estilo para los bloques de código*/
+.codeblock {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: Consolas, monospace;
+    font-size: 0.9rem;
+
+    /* Ajustes nuevos */
+    margin: 0 auto;          /* Centra el bloque */
+    max-width: 100%;         /* Se adapta a la pantalla */
+    width: 100%;             /* Ocupa todo el ancho disponible */
+    box-sizing: border-box;  /* Evita que el padding empuje el contenido */
+    overflow-x: auto;        /* Scroll horizontal si es necesario */
+    white-space: pre;        /* Mantiene formato */
+}
+
+
+
+/* C++ */
+.include { color: #569cd6; font-weight: bold; }
+.comentario { color: #6a9955; font-style: italic; }
+.dato { color: #4ec9b0; }
+.keyword { color: #c586c0; }      /* int, return, using, namespace, etc. */
+.funcion { color: #dcdcaa; }      /* cout, endl */
+.operador { color: #d4d4d4; }     /* + - * / % */
+.numero { color: #b5cea8; }
+.cadena { color: #ce9178; }       /* "texto" */
+.caracter { color: #d7ba7d; }     /* 'A' */
+.namespace { color: #9cdcfe; }
+
+/*html*/
+.tag { color: #569cd6; }
+.attr { color: #9cdcfe; }
+.value { color: #ce9178; }
+.text { color: #dcdcaa; }
+
+/*--------------------------------------------------------------------------------*/
+/*Estilos para el contenido de secundaria*/
 .contenedor {
     background: white;
-    width: 90%;
-    max-width: 800px;
-    height: 90vh;
+    width: 100%;
+    max-width: 1000px;
+    height: 90%;
     padding: 20px;
     border-radius: 10px;
     overflow-y: auto;
@@ -79,7 +121,7 @@
 
 /* Scrollbar para Chrome, Edge y Safari */
 .contenedor::-webkit-scrollbar {
-    width: 40px; /* ← tamaño grande para dedo */
+    width: 20px; /* ← tamaño grande para dedo */
 }
 
 .contenedor::-webkit-scrollbar-track {
@@ -97,4 +139,51 @@
     background: #1a8cff; /* azul más intenso al pasar el cursor */
 }
 
+.titulo{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:20px;
+}
     
+
+/*--------------------------------------------------------------------------------*/
+/*Estilos para la sección de sistemas*/
+.titulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contenido{
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: content-box;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.contenido h4{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom:10px;
+}
+.contenido img {
+    display: block;
+    margin: 20px auto;
+    min-width: 50vh;
+    max-width: 80%;
+    height: auto;
+}
+ 
+.descActi {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
