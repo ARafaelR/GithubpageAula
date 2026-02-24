@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotacion JS</title>
+</head>
+<style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #2b2d42;
+        }
+
+        #cuadrado{
+            width: 150px;
+            height: 150px;
+            background: dodgerblue;
+            border-radius: 10px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s linear;
+        }
+    </style>
+<body>
+
+    <div id="cuadrado"></div>
+</body>
+
+<script>
+    const cuadro = document.getElementById("cuadrado");
+
+    // Ejemplo 1: Cambiar color cada cierto tiempo (setInterval)
+    
+    //lista de colores
+    let colores = ["dodgerblue", "tomato", "limegreen", "gold", "purple"];
+    let indice = 0;
+    let contador = 0;
+    let velocidad = 1000;
+    angulo = 0;
+
+    let intervalo =setInterval(() => {
+        indice = (indice + 1) % colores.length;
+        cuadro.style.backgroundColor = colores[indice];
+        contador +=1;
+        cuadro.textContent = contador.toString();
+        angulo +=90;
+        cuadro.style.transform = `rotate(${angulo}deg)`;
+    }, velocidad); 
+
+
+    //Detener a los 5 segundos
+    //setTimeout(() => {
+    //    clearInterval(intervalo);
+    //}, 20000);
+</script>
+</html>

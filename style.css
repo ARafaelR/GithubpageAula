@@ -188,3 +188,11 @@
     line-height: 1.6;
     margin-top: 20px;
 }
+
+/*Contenido externo*/
+
+/*Animación 1, rotación*/
+.Cont-externo{
+    width:50% !important;
+    height: 50%;
+}

@@ -101,6 +101,55 @@
             </p>
 
         </div>
+        <br>
+        <div class="contenido">
+            <h4>practica animación básica</h4>
+            <hr>
+            <iframe class="Cont-externo" src="cont-ext.html" frameborder="0"></iframe>
+            <br>
+            <br>
+            <h4>HTML</h4>
+            <div class="codeblock">
+                    <pre>
+                    <span class="tag">&lt;body&gt;</span>
+
+                        <span class="tag">&lt;div</span> <span class="attr">id</span>=<span class="value">"cuadrado"</span><span class="tag">&gt;&lt;/div&gt;</span>
+
+                    <span class="tag">&lt;/body&gt;</span>
+                    </pre>
+            </div>
+            <H4>JavaScript</H4>
+            <div class="codeblock">
+                <pre>
+                <span class="tag">&lt;script&gt;</span>
+                    <span class="keyword">const</span> cuadro = document.getElementById(<span class="value">"cuadrado"</span>);
+
+                    <span class="comentario">// Ejemplo 1: Cambiar color cada cierto tiempo (setInterval)</span>
+
+                    <span class="comentario">// lista de colores</span>
+                    <span class="keyword">let</span> colores = [<span class="value">"dodgerblue"</span>, <span class="value">"tomato"</span>, <span class="value">"limegreen"</span>, <span class="value">"gold"</span>, <span class="value">"purple"</span>];
+                    <span class="keyword">let</span> indice = <span class="numero">0</span>;
+                    <span class="keyword">let</span> contador = <span class="numero">0</span>;
+                    <span class="keyword">let</span> velocidad = <span class="numero">1000</span>;
+                    <span class="keyword">let</span> angulo = <span class="numero">0</span>;
+
+                    <span class="keyword">let</span> intervalo = setInterval(() =&gt; {
+                        indice = (indice + <span class="numero">1</span>) % colores.length;
+                        cuadro.style.backgroundColor = colores[indice];
+                        contador += <span class="numero">1</span>;
+                        cuadro.textContent = contador.toString();
+                        angulo += <span class="numero">90</span>;
+                        cuadro.style.transform = \`rotate(\${angulo}deg)\`;
+                    }, velocidad);
+
+                    <span class="comentario">// Detener a los 20 segundos</span>
+                    <span class="comentario">// setTimeout(() =&gt; {</span>
+                    <span class="comentario">//     clearInterval(intervalo);</span>
+                    <span class="comentario">// }, 20000);</span>
+                <span class="tag">&lt;/script&gt;</span>
+                </pre>
+            </div>
+        </div>
     </div>
 </body>
 </html>
