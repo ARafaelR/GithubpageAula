@@ -44,14 +44,23 @@
     let velocidad = 1000;
     angulo = 0;
 
-    let intervalo =setInterval(() => {
+    let intervalo = setInterval(() => {
         indice = (indice + 1) % colores.length;
         cuadro.style.backgroundColor = colores[indice];
         contador +=1;
         cuadro.textContent = contador.toString();
         angulo +=90;
         cuadro.style.transform = `rotate(${angulo}deg)`;
+        rstContador();
     }, velocidad); 
+
+
+    function rstContador (){
+        if(contador.toString() >= 10){
+        contador = 0;
+        angulo = 0;
+    };
+}
 
 
     //Detener a los 5 segundos
