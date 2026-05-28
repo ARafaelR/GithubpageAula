@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Análisis de datos en Excel</title>
+
+<!-- jsPDF y html2canvas -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<style>
+    body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background-color: #f1f1f1;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-color: #04AA6D;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 6px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .question {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"], textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        height: 70px;
+        resize: vertical;
+    }
+
+    .btn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 18px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .btn:hover {
+        background-color: #038e5c;
+    }
+
+    /* RÚBRICA */
+    .rubrica {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #e7f7ef;
+        border-left: 6px solid #04AA6D;
+        border-radius: 4px;
+    }
+
+    .rubrica h2 {
+        margin-top: 0;
+        color: #04AA6D;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+
+    table, th, td {
+        border: 1px solid #bbb;
+    }
+
+    th {
+        background-color: #04AA6D;
+        color: white;
+        padding: 10px;
+    }
+
+    td {
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    .link-btn {
+        background-color: #2196F3;
+        margin-top: 10px;
+    }
+
+    .link-btn:hover {
+        background-color: #0b7dda;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="header">Análisis de Datos en Excel - Excel intermedio</div>
+
+<div class="container">
+
+<!-- NOMBRE -->
+<label><strong>Escribe tu nombre:</strong></label>
+<input type="text" id="nombre">
+
+<!-- INSTRUCCIÓN GENERAL -->
+<p style="margin-top:15px; font-size:17px;">
+<strong>Instrucción:</strong> Responde cada pregunta con claridad, incluyendo explicación del concepto, un ejemplo práctico, su utilidad y términos técnicos <span style="font-weight: bold; font-size: large;">cuando sea necesario.</span> Tu calificación dependerá del nivel de detalle según la rúbrica.
+</p>
+
+<!-- BOTÓN PARA IR A LA RÚBRICA -->
+<button class="btn link-btn" onclick="location.href='#rubrica'">Ver Rúbrica de Evaluación</button>
+
+<hr>
+
+<h2>Responde las siguientes preguntas abiertas</h2>
+
+<!-- PREGUNTAS -->
+<script>
+const preguntas = [
+"Explica en qué situación usarías la función ESPACIOS para limpiar datos importados.",
+"Describe un caso práctico donde convertir texto a mayúsculas o minúsculas ayuda a estandarizar información.",
+"¿Por qué es útil aplicar NOMPROPIO a una columna de nombres capturados manualmente?",
+"Explica para qué sirve unir varias columnas de texto en una sola mediante CONCATENAR.",
+"Describe una situación donde necesites encontrar una palabra dentro de una cadena usando HALLAR.",
+"Explica por qué es importante que Excel reconozca un dato como fecha y no como texto.",
+"Describe un caso donde necesites mostrar una fecha en un formato personalizado.",
+"¿Para qué sirve calcular la fecha actual automáticamente con la función HOY?",
+"Explica una situación donde sea útil registrar fecha y hora exacta con AHORA.",
+"Explica por qué es necesario convertir un rango en tabla antes de crear una tabla dinámica.",
+"Describe para qué sirve calcular un total acumulado dentro de una tabla dinámica.",
+"¿En qué caso usarías un ranking para analizar datos?",
+"Explica por qué a veces es necesario ocultar subtotales en una tabla dinámica.",
+"Describe un ejemplo donde necesites crear un campo calculado para obtener un indicador adicional.",
+"¿Para qué sirve convertir una tabla dinámica en tarjetas de datos?",
+"Explica por qué es útil controlar varias tablas dinámicas con los mismos segmentadores.",
+"Describe una situación donde un gráfico dinámico facilita la interpretación de datos.",
+"¿Qué elementos eliminarías de un gráfico dinámico para hacerlo más claro?",
+"Escribe el nombre de la interfaz final donde mostramos el resumen del análisis de datos en Excel.",
+"Explica por qué es importante exportar el dashboard final a PDF antes de compartirlo."
+];
+</script>
+
+<div id="preguntas-container"></div>
+
+<script>
+let html = "";
+preguntas.forEach((p, i) => {
+    html += `
+    <div class="question">
+        <label>${i+1}. ${p}</label>
+        <textarea id="resp${i+1}"></textarea>
+    </div>`;
+});
+document.getElementById("preguntas-container").innerHTML = html;
+</script>
+
+<!-- BOTÓN PARA GENERAR PDF -->
+<button class="btn" onclick="generarPDF()">Generar PDF con mis respuestas</button>
+
+<!-- RÚBRICA -->
+<div class="rubrica" id="rubrica">
+    <h2>Rúbrica de Evaluación (0.5 puntos por pregunta)</h2>
+
+    <table>
+        <tr>
+            <th>Puntaje</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>0.5</td>
+            <td>Respuesta completa: explica el concepto, incluye ejemplo práctico, utilidad, términos técnicos y responde exactamente lo solicitado.</td>
+        </tr>
+        <tr>
+            <td>0.4</td>
+            <td>Explica el concepto y da ejemplo o utilidad, pero falta detalle o precisión técnica.</td>
+        </tr>
+        <tr>
+            <td>0.3</td>
+            <td>Menciona el concepto, pero la explicación es superficial o incompleta.</td>
+        </tr>
+        <tr>
+            <td>0.2</td>
+            <td>Respuesta muy limitada: apenas menciona el concepto sin relación clara.</td>
+        </tr>
+        <tr>
+            <td>0.1</td>
+            <td>Respuesta irrelevante o mínima: menciona palabras clave sin explicar.</td>
+        </tr>
+        <tr>
+            <td>0.0</td>
+            <td>No responde o la respuesta es incorrecta.</td>
+        </tr>
+    </table>
+</div>
+
+</div>
+
+<script>
+function generarPDF() {
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({ unit: "mm", format: "letter" });
+
+    let y = 15;
+
+    pdf.setFontSize(16);
+    pdf.text("Análisis de datos en Excel", 10, y);
+    y += 10;
+
+    const nombre = document.getElementById("nombre").value || "Sin nombre";
+    const fecha = new Date().toLocaleDateString();
+
+    pdf.setFontSize(12);
+    pdf.text("Nombre: " + nombre, 10, y); y += 7;
+    pdf.text("Fecha: " + fecha, 10, y); y += 10;
+
+    preguntas.forEach((p, i) => {
+        const resp = document.getElementById("resp" + (i+1)).value || "Sin respuesta";
+
+        pdf.setFontSize(11);
+        pdf.text((i+1) + ". " + p, 10, y);
+        y += 6;
+
+        let split = pdf.splitTextToSize(resp, 180);
+        pdf.text(split, 10, y);
+        y += split.length * 6 + 4;
+
+        if (y > 250) {
+            pdf.addPage();
+            y = 15;
+        }
+    });
+
+    pdf.addPage();
+    y = 15;
+
+    pdf.setFontSize(14);
+    pdf.text("Rúbrica de Evaluación", 10, y);
+    y += 10;
+
+    const rubrica = [
+        "0.5 - Respuesta completa: concepto, ejemplo, utilidad, términos técnicos, enfoque correcto.",
+        "0.4 - Respuesta casi completa: falta detalle o precisión.",
+        "0.3 - Respuesta parcial: explicación superficial.",
+        "0.2 - Respuesta muy limitada.",
+        "0.1 - Respuesta irrelevante o mínima.",
+        "0.0 - Sin respuesta o incorrecta."
+    ];
+
+    rubrica.forEach(r => {
+        let split = pdf.splitTextToSize(r, 180);
+        pdf.text(split, 10, y);
+        y += split.length * 6 + 4;
+    });
+
+    pdf.save("Examen_semestralT.pdf");
+}
+</script>
+
+</body>
+</html>
